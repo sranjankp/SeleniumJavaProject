@@ -1,0 +1,13 @@
+package testscripts;
+import static io.restassured.RestAssured.*;
+
+import org.testng.annotations.Test;
+
+public class TestAPI {
+	@Test
+	public void getUserInPageTwo()
+	{
+		
+	}
+
+}

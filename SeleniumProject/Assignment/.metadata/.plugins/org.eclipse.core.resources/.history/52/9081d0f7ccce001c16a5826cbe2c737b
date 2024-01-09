@@ -1,0 +1,28 @@
+package Assignment1;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test2 {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver d= new ChromeDriver();
+		d.get("http://www.uitestpractice.com/");
+		d.manage().window().maximize();
+		d.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+		d.findElement(By.xpath("//a[normalize-space()='Switch to']")).click();
+	   // d.quit();*/
+
+	
+}}

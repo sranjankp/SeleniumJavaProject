@@ -1,0 +1,31 @@
+package maven1;
+
+import java.util.concurrent.TimeUnit;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class action18 {
+
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver d= new ChromeDriver();
+		d.get("http://omayo.blogspot.com/");
+		d.manage().window().maximize();
+		d.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+		WebElement r = d.findElement(By.id("link1"));
+		Actions a= new Actions(d);
+		a.moveToElement(r).perform();
+		WebElement s = d.findElement(By.xpath("//tbody/tr[1]/td[2]/input[1]"));
+		a.moveToElement(s).sendKeys("ahashi").perform();
+		
+		
+	}
+
+}

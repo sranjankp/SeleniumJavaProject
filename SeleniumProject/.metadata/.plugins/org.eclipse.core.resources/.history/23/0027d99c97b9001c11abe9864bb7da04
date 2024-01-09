@@ -1,0 +1,25 @@
+import java.util.LinkedList;
+
+public class LinkedList1 {
+
+	public static void main(String[] args) {
+		LinkedList s= new LinkedList();
+		s.add("shashi");
+		s.add("Pruvi");
+		s.add("neha");
+		System.out.println(s);
+      //  s.addFirst("ranjana");
+        //System.out.println(s);
+        //s.addLast("Puja");
+        //System.out.println(s);
+        //s.add(3,"silpi");
+        //System.out.println(s);
+        //  s.remove();
+          //System.out.println(s);
+          //s.remove(1);
+          //System.out.println(s);
+		s.removeFirst();
+		System.out.println(s);
+	}
+
+}

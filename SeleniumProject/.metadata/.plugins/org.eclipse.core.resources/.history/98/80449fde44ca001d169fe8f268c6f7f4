@@ -1,0 +1,18 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.drive", "C:\\Users\\sranjank\\Music\\SeleniumProject\\Shashi\\Driver\\chromedriver.exe");
+        ChromeOptions chromeOptions= new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
+       // co.addArguments("--remote-allow-origins=*");
+        WebDriver d= new ChromeDriver(chromeOptions);
+        d.get("http://omayo.blogspot.com");
+        d.findElement(By.id("link2")).click();
+	}
+
+}

@@ -1,0 +1,13 @@
+package MAVENP;
+
+import org.junit.Test;
+
+public class Testng5 {
+ @Test
+public void  test() {
+	 System.out.println("shashi ");
+		
+		
+	}
+
+}

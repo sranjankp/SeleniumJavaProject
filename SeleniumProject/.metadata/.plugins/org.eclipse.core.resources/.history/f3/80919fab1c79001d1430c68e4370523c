@@ -1,0 +1,16 @@
+package testscripts;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class ExcelDatdaReader {
+	@Test
+	public void getrowcount()
+	{
+		String excelpah="./SHASHI.xlsx";
+		System.out.println(excelpah);
+		XSSFWorkbook workbook=new XSSFWorkbook();
+				
+	}
+
+}

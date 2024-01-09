@@ -1,0 +1,14 @@
+package MAVENP;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestNg {
+	@Test
+	WebDriverManager.chromeDriver.setup();
+	WebDriver d=new ChromeDriver();
+	
+
+}

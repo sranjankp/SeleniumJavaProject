@@ -1,0 +1,13 @@
+package MAVENP;
+
+import org.junit.Test;
+import org.testng.Assert;
+
+public class Testng6 {
+	@Test
+	public void Test() {
+		int a=10,b=20;
+		Assert.assertTrue(a>b);
+	}
+
+}

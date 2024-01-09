@@ -1,0 +1,17 @@
+package MAVENP;
+
+import org.testng.annotations.Test;
+
+public class Testng4 {
+@Test
+public void shashi() throws Exception{
+int a=10;
+if(a<5)
+{
+	throw new Exception ("shashi ranjan kumar");
+}
+
+
+}
+
+}

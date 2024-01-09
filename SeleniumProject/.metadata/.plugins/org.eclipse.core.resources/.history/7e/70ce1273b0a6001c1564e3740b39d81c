@@ -1,0 +1,13 @@
+package MAVENP;
+
+import org.testng.annotations.Test;
+
+public class Testng5 {
+@Test
+public void Sample() {
+System.out.println("shashi ranjan kumar");	
+
+
+
+}
+}

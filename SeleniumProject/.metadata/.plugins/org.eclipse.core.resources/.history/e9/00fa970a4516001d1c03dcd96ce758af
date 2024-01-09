@@ -1,0 +1,35 @@
+package tests;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pageobjects.Accountpage;
+import pageobjects.LandingPage;
+import pageobjects.Loginpage;
+import resources.Base;
+
+public class LoginTest extends Base {
+	@Test
+	public void login() throws IOException
+	{
+		WebDriver driver = initializeBrowser();
+		driver.get(prop.getProperty("url"));
+		LandingPage land= new LandingPage(driver);
+		land.myaccounts().click();
+		land.logins().click();
+		Loginpage log = new Loginpage(driver);
+		log.Emailb().sendKeys(prop.getProperty("emails"));
+		log.Passwordb().sendKeys(prop.getProperty("passwords"));
+		log.Submitb().click();
+		Accountpage acc= new Accountpage(driver);
+		Assert.assertTrue(acc.accounting().isDisplayed());
+		
+				
+		
+		
+	}
+
+}

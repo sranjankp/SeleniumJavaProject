@@ -1,0 +1,109 @@
+package Assignment1;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver d= new ChromeDriver();
+		d.get("http://www.uitestpractice.com/");
+		d.manage().window().maximize();
+		d.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+		Thread.sleep(3000);
+		
+		//Button Double Click
+		WebElement r = d.findElement(By.name("dblClick"));
+		Actions a= new Actions(d);
+	       a.doubleClick(r).perform();
+	       Thread.sleep(3000); 
+	      Alert alert = d.switchTo().alert();
+	      alert.accept();
+		Thread.sleep(3000);
+		
+		//Iframe
+	WebElement f = d.findElement(By.name("iframe_a"));
+	d.switchTo().frame(f);
+		d.findElement(By.id("name")).sendKeys("SHASHI RANJAN KUMAR");
+	  Thread.sleep(3000);
+	  
+	//click on the below link:
+		//uitestpractice.com
+		d.switchTo().defaultContent();
+		d.findElement(By.xpath("//a[contains(text(),'uitestpractice.com')]")).click();
+		Thread.sleep(3000);
+		
+		//Click on the below button to open link in new Tab
+		d.findElement(By.xpath("//a[contains(text(),'Visit uitest practice')]")).click();
+		Thread.sleep(3000);
+		
+		//Click on the below button to open link in new Window
+		d.findElement(By.xpath("//a[contains(text(),'Click here to watch videos on C#')]")).click();
+		 Set<String> sit = d.getWindowHandles();
+			Iterator<String>i=sit.iterator();
+			String m= i.next();
+			String c = i.next();
+			String c1=i.next();
+			d.switchTo().window(m);
+		d.switchTo().defaultContent();
+		Thread.sleep(3000);
+		
+		//Toggle icons
+		d.findElement(By.xpath("//span[contains(text(),'Toggle icons')]")).click();
+		Thread.sleep(3000);
+		d.findElement(By.id("ui-id-1")).click();
+		String mv= d.findElement(By.xpath("//p[contains(text(),'Mauris mauris ante, blandit et, ultrices a, suscip')]")).getText();
+		System.out.println(mv);
+		Thread.sleep(3000);
+		d.findElement(By.id("ui-id-2")).click();
+		String s = d.findElement(By.xpath("//p[contains(text(),'Sed non urna. Donec et ante. Phasellus eu ligula. ')]")).getText();
+		System.out.println(s);
+		Thread.sleep(3000);
+		d.findElement(By.id("ui-id-3")).click();
+		String co = d.findElement(By.xpath("//p[contains(text(),'Nam enim risus, molestie et, porta ac, aliquam ac,')]")).getText();
+		System.out.println(co);
+		Thread.sleep(3000);
+		d.findElement(By.id("ui-id-4")).click();
+		String mo = d.findElement(By.xpath("//p[contains(text(),'Cras dictum. Pellentesque habitant morbi tristique')]")).getText();
+		System.out.println(mo);
+		Thread.sleep(3000);
+		
+		//Selectable Control
+		d.findElement(By.xpath(" //li[contains(text(),'11')]")).click();
+		Thread.sleep(3000);
+		
+		//Sortable Control
+     /*   d.findElement(By.xpath("//span[@class='ui-icon portlet-toggle ui-icon-plusthick']")).click();
+		Thread.sleep(3000);*/
+		//Dialog Control
+		d.findElement(By.id("create-user")).click();
+		WebElement name = d.findElement(By.id("name"));
+		name.clear();
+		name.sendKeys("Shashi Ranjan");
+		WebElement email = d.findElement(By.id("email"));
+		email.clear();
+		email.sendKeys("ranjan181995@gmail.com");
+		WebElement pass = d.findElement(By.id("password"));
+		pass.clear();
+		pass.sendKeys("12345");
+		Thread.sleep(4000);
+		d.findElement(By.xpath("//button[.='Create an account']")).click();
+		Thread.sleep(3000);
+		
+		Thread.sleep(3000);
+      d.quit();
+
+	}
+
+}

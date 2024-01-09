@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/sranjank/.m2/repository/org/scala-lang/scala-library/2.13.5/scala-library-2.13.5.jar" sourcepath="C:/Users/sranjank/.m2/repository/org/scala-lang/scala-library/2.13.5/scala-library-2.13.5-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.scala-lang"/>
+			<attribute name="maven.artifactId" value="scala-library"/>
+			<attribute name="maven.version" value="2.13.5"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/selenium_webdriver/library/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="/selenium_webdriver/library/jetty-util-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="/selenium_webdriver/library/neko-htmlunit-2.23.jar"/>
+	<classpathentry kind="lib" path="/selenium_webdriver/library/htmlunit-2.23.jar"/>
+	<classpathentry kind="lib" path="/selenium_webdriver/library/client-combined-3.0.1-nodeps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sranjank/.m2/repository/org/seleniumhq/selenium/selenium-api/4.1.2/selenium-api-4.1.2.jar" sourcepath="C:/Users/sranjank/.m2/repository/org/seleniumhq/selenium/selenium-api/4.1.2/selenium-api-4.1.2-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-api"/>
+			<attribute name="maven.version" value="4.1.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,18 @@
+package testscripts;
+import static io.restassured.RestAssured.*;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+public class TestAPI {
+	@Test
+	public void getUserInPageTwo()
+	{
+	Response response= given().when().get("https://reqres.in/api/users?page=2");
+	int a=response.statusCode();
+	Assert.assertEquals(a, 200);
+	}
+
+}

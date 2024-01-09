@@ -1,0 +1,20 @@
+package maven1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class java2 {
+
+	public static void main(String[] args) throws InterruptedException {
+	WebDriverManager.chromedriver().setup();
+	WebDriver d= new ChromeDriver();
+	d.get("https://www.javatpoint.com/");
+	Thread.sleep(3000);
+	d.findElement(By.linkText("java-tutorial")).click();
+	
+	}
+
+}

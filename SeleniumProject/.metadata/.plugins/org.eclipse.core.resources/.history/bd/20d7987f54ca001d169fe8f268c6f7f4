@@ -1,0 +1,18 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sranjank\\Music\\SeleniumProject\\Shashi\\Driver\\chromedriver.exe");
+		ChromeOptions co= new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
+		WebDriver d= new ChromeDriver(co);
+		d.manage().window().maximize();
+        d.get("http://omayo.blogspot.com");
+        d.findElement(By.linkText("http://www.selenium143.blogspot.com/")).click();
+	}
+
+}

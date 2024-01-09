@@ -1,0 +1,46 @@
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Practice {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sranjank\\Music\\SeleniumProject\\Shashi\\Driver\\chromedriver.exe");
+		ChromeOptions co= new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
+		WebDriver d= new ChromeDriver(co);
+		d.manage().window().maximize();
+        d.get("http://omayo.blogspot.com"); 
+        System.out.println( d.getTitle());
+        d.findElement(By.xpath("//a[.='SeleniumTutorial']")).click();
+        Set<String> win = d.getWindowHandles();
+        for(String w:win)
+        {
+        	d.switchTo().window(w);
+        	if(d.getTitle().equals("Selenium143"))
+        	{
+        		Thread.sleep(5000);
+        		String s = d.findElement(By.xpath("//h2[.='Blog Stats']")).getText();
+        		System.out.println(s);
+        		Thread.sleep(5000);
+        		d.close();
+        	}
+        	if(d.getTitle().equals("omayo (QAFox.com) - Atom"))
+        	{
+        		d.findElement(By.xpath("//a[.='Open a popup window']")).click();
+        		String r = d.findElement(By.id("para1")).getText();
+        		System.out.println(r);
+        		Thread.sleep(3000);
+        		d.close();
+        	}
+        }
+        		
+      
+        
+        	}
+
+}

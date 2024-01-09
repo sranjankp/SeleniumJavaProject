@@ -1,0 +1,17 @@
+package POIAPI;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Demo {
+
+	public static void main(String[] args) throws IOException {
+		FileInputStream  fis= new FileInputStream("C:\\Users\\sranjank\\Pictures\\Saved Pictures\\ExcelTestData.xlsx");
+		XSSFWorkbook workbook= new XSSFWorkbook(fis);
+		int s=workbook.getNumberOfSheets();
+		System.out.println(s);
+	}
+
+}

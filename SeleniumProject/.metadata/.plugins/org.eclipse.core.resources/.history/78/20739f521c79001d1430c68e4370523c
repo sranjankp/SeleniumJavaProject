@@ -1,0 +1,15 @@
+package testscripts;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+public class ExcelDatdaReader {
+	@Test
+	public void getrowcount()
+	{
+		
+		XSSFWorkbook workbook=new XSSFWorkbook();
+				
+	}
+
+}

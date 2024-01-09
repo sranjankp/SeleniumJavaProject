@@ -1,0 +1,15 @@
+
+import java.util.Stack;
+
+public class Stack1 {
+
+	public static void main(String[] args) {
+		Stack<String> s= new Stack<String>();
+		s.add("shashi");
+		s.add("Pruvi");
+		s.add("neha");
+		System.out.println(s);
+
+	}
+
+}

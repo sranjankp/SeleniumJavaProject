@@ -1,0 +1,12 @@
+package POIAPI;
+
+import java.io.FileInputStream;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		FileInputStream  fis= new FileInputStream("C:\\Users\\sranjank\\New folder");
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package Assignment1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test2 {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver d= new ChromeDriver();
+		d.get("http://www.uitestpractice.com/");
+		d.manage().window().maximize();
+		d.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+		Thread.sleep(3000);
+	d.findElement(By.id("add_tab")).click();
+	WebElement addtitle = d.findElement(By.id("tab_title"));
+	addtitle.clear();
+	addtitle.sendKeys("Narendra Modi");
+	WebElement Content = d.findElement(By.id("tab_content"));
+	Content.clear();
+	Content.sendKeys("Narendra Damodardas Modi (Gujarati: [ˈnəɾendɾə dɑmodəɾˈdɑs ˈmodiː] (listen); born 17 September 1950)[a] is an Indian politician serving as the 14th and current prime minister of India since 2014. Modi was the chief minister of Gujarat from 2001 to 2014 and is the Member of Parliament from Varanasi. He is a member of the Bharatiya Janata Party (BJP) and of the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer organisation. He is the first prime minister to have been born after India's independence in 1947 and the second prime minister not belonging to the Indian National Congress to have won two consecutive majorities in the Lok Sabha, or the lower house of India's parliament. He is also the longest serving prime minister from a non-Congress party.");
+	d.findElement(By.className("ui-button-text")).click();	
+	//d.quit();
+
+	
+}}

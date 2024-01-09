@@ -1,0 +1,11 @@
+package shahsi;
+
+import org.testng.annotations.Test;
+
+public class shashi1 {
+	@Test
+	public void saample() {
+		System.out.println("shahsiranja");
+		
+	}
+}

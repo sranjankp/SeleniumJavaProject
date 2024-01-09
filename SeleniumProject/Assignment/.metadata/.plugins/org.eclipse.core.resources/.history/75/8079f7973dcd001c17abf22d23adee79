@@ -1,0 +1,40 @@
+package Assignment1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Test2 {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver d= new ChromeDriver();
+		d.get("http://www.uitestpractice.com/");
+		d.manage().window().maximize();
+		
+		d.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+		d.findElement(By.xpath("//a[.='Home']")).click();
+		d.findElement(By.id("Search_Data")).sendKeys("Prakash");
+		Thread.sleep(2000);
+		d.findElement(By.xpath("//input[@class='btn ']")).click();
+		Thread.sleep(2000);
+		for(int i=0;i<=1;i++)
+		{
+		d.findElement(By.xpath("//a[contains(text(),'»')]")).click();
+		d.findElement(By.xpath("//*[@id='dismiss-button']")).click();
+		Thread.sleep(2000);
+		}
+		//d.findElement(By.className("//tbody/tr[2]/td[4]/button[1]")).click();
+		//WebElement date = d.findElement(By.id("EnrollmentDate"));
+		//date.clear();*/
+		
+	//d.quit();
+
+	
+}}
