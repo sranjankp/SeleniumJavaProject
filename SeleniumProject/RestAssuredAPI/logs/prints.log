@@ -1,5 +1,0 @@
-14:45:33.687 [main] INFO  base.TestBase - ********Started TC00*********
-14:45:38.846 [main] INFO  base.TestBase - ********Checking Body*********
-14:45:38.859 [main] INFO  base.TestBase - Responebody=={"status":"success","data":{"id":11,"employee_name":"Jena Gaines","employee_salary":90560,"employee_age":30,"profile_image":""},"message":"Successfully! Record has been fetched."}
-14:45:38.866 [main] INFO  base.TestBase - ********Checking Responsetime*********
-14:45:38.867 [main] INFO  base.TestBase - reponsetime==1540
