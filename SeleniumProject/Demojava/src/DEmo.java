@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class DEmo {
 
 	public static void main(String[] args) {
+	System.out.println("Updated in git hub");	
 	System.out.println("Enter number");
 	Scanner s= new Scanner(System.in);
 	String str=s.nextLine();
